@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here!</title>
+    <script>
+        const DONT_CHECK_AUTH = true;
+    </script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/register.js"></script>
+</head>
+<body>
+    <div class="contaienr">
+        <form onsubmit="return false;">
+            <input type="text" name="username" placeholder="Username" id="username" required><br>
+            <input type="password" name="password" placeholder="Password" id="password" required><br>
+            <input type="text" name="real_name" placeholder="Real Name" id="real_name" required><br>
+            <input type="email" name="email" placeholder="Email" id="email" required><br>
+            <input type="text" name="address" placeholder="Address" id="address" required><br>
+            <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" required><br>
+            <div id="error"></div>
+            <button type="submit" id="register">Register</button>
+        </form>
+        <div id="login">Do you have an account? <a href="/login.html">Login</a></div>
+    </div>
+</body>
+</html>

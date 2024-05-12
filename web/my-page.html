@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/my-page.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Page</h1>
+        <p>This is your personal page. You can see your account details here.</p>
+        <label for="userid">User ID(When you contact support, please provide this ID):</label>
+        <input type="text" id="userid" value="1234567890" readonly><br>
+        <label for="username">Real Name:</label>
+        <input type="text" id="username" value="Gildong Hong"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="example@example.com"><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" value="123-456-7890"><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" value="1234 Main St."><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" value="password"><br>
+        <label for="oldPassword">Old Password:</label>
+        <input type="password" id="oldPassword" value="password"><br>
+        <button id="edit">Edit</button>
+        <button id="delete">Delete Account</button>
+        <p><a href="/logout.html">Click here to logout</a></p>
+    </div>
+</body>
+</html>

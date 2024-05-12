@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <script>
+        const DONT_CHECK_AUTH = true;
+    </script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/login.js"></script>
+</head>
+<body>
+    <div class="contaienr">
+        <form onsubmit="return false;" id="loginForm">
+            <input type="text" name="username" placeholder="Username" id="username" required><br>
+            <input type="password" name="password" placeholder="Password" id="password" required autocomplete="current-password"><br>
+            <div id="error"></div>
+            <button type="submit" id="login">Login</button>
+        </form>
+        <div id="register">Don't have an account? <a href="/register.html">Register</a></div>
+    </div>
+</body>
+</html>

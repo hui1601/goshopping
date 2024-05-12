@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://js.tosspayments.com/v1/payment"></script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/payment.js"></script>
+    <title>Payment</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Payment</h1>
+        <div id="product"></div>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" required><br>
+        <label for="request-message">Request Message:</label>
+        <input type="text" name="request_message" id="request-message"><br>
+        <div id="payment-method"></div>
+        <div id="agreement"></div>
+        <button id="payment-button">Pay</button>
+        <div id="error"></div>
+    </div>
+</body>
+</html>

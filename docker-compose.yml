@@ -1,0 +1,30 @@
+services:
+  database:
+    image: mariadb:11.4.1-rc
+    restart: always
+    environment:
+        MARIADB_USER: ${DB_USERNAME}
+        MARIADB_PASSWORD: ${DB_PASSWORD}
+        MARIADB_DATABASE: ${DB_DATABASE}
+        MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    expose:
+        - "3306"
+  api:
+    build: api
+    restart: always
+    ports:
+        - "8080:8080"
+    depends_on:
+        - database
+  web:
+    image: nginx:mainline-alpine
+    restart: always
+    volumes:
+        - ./web:/usr/share/nginx/html
+    ports:
+        - "8000:80"
+    environment:
+        - NGINX_HOST=web
+        - NGINX_PORT=8000
+    depends_on:
+        - api
